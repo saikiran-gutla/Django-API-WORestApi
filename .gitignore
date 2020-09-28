@@ -1,0 +1,6 @@
+The system cannot find the file specified.
+db.sqlite3
+migrations
+Employee/__pycache__
+WORestAPI/__pycache__
+/venv
