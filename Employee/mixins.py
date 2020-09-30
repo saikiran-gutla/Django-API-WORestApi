@@ -12,5 +12,7 @@ class HttpResponseMixin(object):
 
 
 class SerializerMixin(object):
-    def serialize_data(self, data, fields=None):
-        return serialize('json', [data], fields=fields)
+    def serialize_data(self, data=None, fields=None, queryset=None):
+        if data is not None:
+            return serialize('json', [data], fields=fields)
+        return serialize('json', fields=fields, queryset=queryset)

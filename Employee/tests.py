@@ -1,5 +1,6 @@
 import requests
 import json
+
 # Create your tests here.
 ABSOLUTE_URL = "http://127.0.0.1:8000/employee/api/"
 
@@ -16,4 +17,10 @@ def post_data():
     print(f"Response : {resp.text}")
 
 
-post_data()
+def get_data(id):
+    resp = requests.get(url=ABSOLUTE_URL, data=json.dumps({'e_no': id}))
+    print(f"Response : {resp.status_code}")
+    print(f"Response : {resp.text}")
+
+
+get_data(None)
